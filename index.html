@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Angel Alaine Nunez | Aspiring Virtual Assistant</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #fff8fc;
+            color: #4d4050;
+            line-height: 1.6;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 248, 252, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 3px 15px rgba(180, 130, 170, 0.12);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #b75d8c;
+        }
+
+        .logo span {
+            color: #9b7bb5;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #5e5060;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #c45d91;
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            padding: 100px 25px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: #9c527d;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #806f80;
+        }
+
+        .pink {
+            color: #c65f92;
+        }
+
+        /* ================= HOME ================= */
+
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            background:
+                radial-gradient(circle at top right, #f5d9ea, transparent 35%),
+                radial-gradient(circle at bottom left, #e8def6, transparent 35%),
+                #fff8fc;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-text small {
+            color: #b55d8b;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            line-height: 1.1;
+            color: #4f3e4e;
+            margin: 15px 0;
+        }
+
+        .hero-text h1 span {
+            color: #b85d8c;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            max-width: 600px;
+            color: #756676;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #c45f91;
+            color: white;
+            box-shadow: 0 8px 20px rgba(196, 95, 145, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: #ad4f7e;
+        }
+
+        .btn-secondary {
+            border: 2px solid #cfa3c0;
+            color: #a35480;
+        }
+
+        .btn-secondary:hover {
+            background: #f7e4ef;
+        }
+
+        /* Profile Card */
+
+        .profile-card {
+            background: white;
+            padding: 35px;
+            border-radius: 35px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(180, 130, 170, 0.18);
+            border: 1px solid #f0dce9;
+        }
+
+        .profile-circle {
+            width: 180px;
+            height: 180px;
+            margin: auto;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f1c9df, #ded2ef);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .profile-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 27px;
+            color: #9c527d;
+        }
+
+        .profile-card p {
+            color: #806f80;
+        }
+
+        /* ================= ABOUT ================= */
+
+        #about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-box {
+            background: #fff8fc;
+            padding: 35px;
+            border-radius: 25px;
+            border: 1px solid #f0dce9;
+        }
+
+        .about-box h3 {
+            font-family: 'Playfair Display', serif;
+            color: #9c527d;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .about-box p {
+            margin-bottom: 15px;
+            color: #756676;
+        }
+
+        .about-list {
+            list-style: none;
+        }
+
+        .about-list li {
+            margin: 12px 0;
+        }
+
+        .about-list li::before {
+            content: "♡";
+            color: #c45f91;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* ================= SERVICES ================= */
+
+        #services {
+            background: #fff8fc;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            border: 1px solid #f0dce9;
+            transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(180, 130, 170, 0.08);
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(180, 130, 170, 0.16);
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 16px;
+            background: #f5dce9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: #9c527d;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #796c78;
+        }
+
+        /* ================= SAMPLE WORK ================= */
+
+        #work {
+            background: white;
+        }
+
+        .practice-note {
+            max-width: 750px;
+            margin: -25px auto 45px;
+            background: #f8eaf2;
+            border-left: 5px solid #c45f91;
+            padding: 16px 20px;
+            border-radius: 12px;
+            color: #70566a;
+            text-align: center;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .work-card {
+            background: #fffafd;
+            border: 1px solid #efdce8;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(180, 130, 170, 0.09);
+            transition: 0.3s;
+        }
+
+        .work-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 35px rgba(180, 130, 170, 0.16);
+        }
+
+        .work-content {
+            padding: 25px;
+        }
+
+        .work-content h3 {
+            font-family: 'Playfair Display', serif;
+            color: #9c527d;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .work-content p {
+            color: #766978;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #f2dceb;
+            color: #9d527d;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* ================= MOCKUPS ================= */
+
+        .mockup {
+            background: #f5eef7;
+            padding: 18px;
+            min-height: 230px;
+        }
+
+        .mock-window {
+            background: white;
+            border-radius: 14px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(100, 70, 100, 0.08);
+        }
+
+        .mock-header {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #d99abd;
+        }
+
+        .dot:nth-child(2) {
+            background: #cbb0df;
+        }
+
+        .dot:nth-child(3) {
+            background: #e8c8d9;
+        }
+
+        /* EMAIL */
+
+        .email-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #f0e9f0;
+            font-size: 13px;
+        }
+
+        .email-row:last-child {
+            border-bottom: none;
+        }
+
+        .email-title {
+            font-weight: 700;
+        }
+
+        .email-tag {
+            background: #f5dce9;
+            color: #a35480;
+            border-radius: 10px;
+            padding: 3px 7px;
+            font-size: 10px;
+        }
+
+        /* CALENDAR */
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 5px;
+        }
+
+        .calendar-day {
+            background: #faf5fb;
+            border-radius: 8px;
+            padding: 7px;
+            min-height: 145px;
+            font-size: 10px;
+        }
+
+        .calendar-day strong {
+            color: #9c527d;
+        }
+
+        .event {
+            margin-top: 8px;
+            padding: 6px;
+            background: #eadcf4;
+            border-radius: 6px;
+            color: #67536e;
+        }
+
+        .event.pink-event {
+            background: #f6dce9;
+        }
+
+        /* SPREADSHEET */
+
+        .spreadsheet {
+            overflow-x: auto;
+        }
+
+        .spreadsheet table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+
+        .spreadsheet th {
+            background: #eadcf2;
+            color: #704e69;
+        }
+
+        .spreadsheet th,
+        .spreadsheet td {
+            padding: 8px;
+            border: 1px solid #eadfea;
+            text-align: left;
+        }
+
+        .status {
+            padding: 3px 7px;
+            border-radius: 10px;
+            background: #e2f0df;
+            color: #58744f;
+            font-size: 9px;
+        }
+
+        /* DOCUMENT */
+
+        .document {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            min-height: 190px;
+        }
+
+        .document h4 {
+            text-align: center;
+            color: #8e5075;
+            margin-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .document .subtitle {
+            text-align: center;
+            font-size: 10px;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .document-line {
+            height: 7px;
+            background: #eee7ed;
+            border-radius: 5px;
+            margin: 7px 0;
+        }
+
+        .document-line.short {
+            width: 60%;
+        }
+
+        .document-line.medium {
+            width: 80%;
+        }
+
+        /* RESEARCH */
+
+        .research-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+
+        .research-table th,
+        .research-table td {
+            padding: 8px;
+            border: 1px solid #eadfea;
+        }
+
+        .research-table th {
+            background: #eadcf2;
+            color: #704e69;
+        }
+
+        /* CHAT */
+
+        .chat {
+            padding: 10px;
+        }
+
+        .message {
+            max-width: 75%;
+            padding: 9px 12px;
+            margin: 8px 0;
+            border-radius: 13px;
+            font-size: 12px;
+        }
+
+        .customer {
+            background: #eee8ef;
+            margin-right: auto;
+        }
+
+        .assistant {
+            background: #f5dce9;
+            margin-left: auto;
+            color: #684c61;
+        }
+
+        /* SOCIAL MEDIA */
+
+        .social-post {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .social-image {
+            height: 100px;
+            background: linear-gradient(135deg, #efc9df, #ddd0ed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+        }
+
+        .social-body {
+            padding: 12px;
+            font-size: 11px;
+        }
+
+        .social-name {
+            font-weight: 700;
+            color: #8e5075;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+            color: #a56b8d;
+        }
+
+        /* TASK TRACKER */
+
+        .task-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+
+        .task-table th,
+        .task-table td {
+            padding: 8px;
+            border-bottom: 1px solid #eee5ed;
+            text-align: left;
+        }
+
+        .priority {
+            color: #b35483;
+            font-weight: 700;
+        }
+
+        /* ================= SKILLS ================= */
+
+        #skills {
+            background: #fff8fc;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+        .skills-box {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            border: 1px solid #f0dce9;
+        }
+
+        .skill {
+            margin-bottom: 22px;
+        }
+
+        .skill-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 7px;
+            font-weight: 600;
+        }
+
+        .bar {
+            height: 10px;
+            background: #f0e5ef;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .bar span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, #c45f91, #b794ce);
+            border-radius: 20px;
+        }
+
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tool {
+            padding: 10px 15px;
+            background: #f5e1ed;
+            color: #8e5075;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        /* ================= CONTACT ================= */
+
+        #contact {
+            background: white;
+        }
+
+        .contact-box {
+            max-width: 800px;
+            margin: auto;
+            background: #fff8fc;
+            border: 1px solid #efdce8;
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            color: #9c527d;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            margin: 25px 0;
+        }
+
+        .contact-info p {
+            margin: 12px 0;
+        }
+
+        .contact-info a {
+            color: #a35480;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #4e3d4d;
+            color: #f9eaf3;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 850px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .hero-text h1 {
+                font-size: 48px;
+            }
+
+            .about-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            section {
+                padding: 80px 18px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .section-title h2 {
+                font-size: 34px;
+            }
+
+            .contact-box {
+                padding: 25px;
+            }
+
+            .calendar-grid {
+                overflow-x: auto;
+                grid-template-columns: repeat(5, 100px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+    <div class="nav-container">
+
+        <div class="logo">
+            Angel <span>♡</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Sample Work</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home">
+
+    <div class="container hero">
+
+        <div class="hero-text">
+
+            <small>♡ WELCOME TO MY PORTFOLIO</small>
+
+            <h1>
+                Hi, I'm <span>Angel Alaine</span>
+            </h1>
+
+            <p>
+                An aspiring Virtual Assistant who is organized, detail-oriented,
+                and passionate about helping businesses stay productive and organized.
+            </p>
+
+            <div class="buttons">
+                <a href="#work" class="btn btn-primary">
+                    View My Work
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Contact Me
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="profile-card">
+
+            <div class="profile-circle">
+                ♡
+            </div>
+
+            <h3>Angel Alaine Nunez</h3>
+
+            <p>Aspiring Virtual Assistant</p>
+
+            <br>
+
+            <p>
+                Administrative Support • Data Entry • Email Management
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>About Me ♡</h2>
+
+            <p>Get to know the person behind the portfolio.</p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-box">
+
+                <h3>Hello! I'm Angel.</h3>
+
+                <p>
+                    I am an aspiring Virtual Assistant interested in helping
+                    businesses and individuals manage their daily administrative
+                    tasks efficiently.
+                </p>
+
+                <p>
+                    I enjoy organizing information, creating documents,
+                    managing schedules, and making sure tasks are completed
+                    accurately and on time.
+                </p>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <h3>What I Can Bring ♡</h3>
+
+                <ul class="about-list">
+
+                    <li>Strong attention to detail</li>
+
+                    <li>Organized and responsible</li>
+
+                    <li>Willingness to learn</li>
+
+                    <li>Good communication skills</li>
+
+                    <li>Time management</li>
+
+                    <li>Positive and professional attitude</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My Services ♡</h2>
+
+            <p>Administrative tasks I can assist with.</p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-icon">✉</div>
+
+                <h3>Email Management</h3>
+
+                <p>
+                    Organizing inboxes, sorting emails, flagging important
+                    messages, and helping maintain a clean inbox.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">📅</div>
+
+                <h3>Calendar Management</h3>
+
+                <p>
+                    Scheduling meetings, organizing appointments, and
+                    maintaining an efficient calendar.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">📊</div>
+
+                <h3>Data Entry</h3>
+
+                <p>
+                    Entering, organizing, and maintaining information
+                    accurately in spreadsheets and databases.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">📄</div>
+
+                <h3>Document Formatting</h3>
+
+                <p>
+                    Creating clean, organized, and professional-looking
+                    documents and reports.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🔎</div>
+
+                <h3>Internet Research</h3>
+
+                <p>
+                    Finding reliable information online and organizing
+                    research into easy-to-understand results.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">💬</div>
+
+                <h3>Customer Support</h3>
+
+                <p>
+                    Responding professionally to customer inquiries and
+                    helping maintain positive client experiences.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SAMPLE WORK ================= -->
+
+<section id="work">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My Sample Work ♡</h2>
+
+            <p>
+                Practice projects that demonstrate the type of work I can do.
+            </p>
+
+        </div>
+
+
+        <div class="practice-note">
+
+            <strong>♡ Portfolio Practice Projects</strong><br>
+
+            These are fictional examples created for portfolio purposes.
+            They are not paid client projects.
+
+        </div>
+
+
+        <div class="work-grid">
+
+
+            <!-- 1 EMAIL MANAGEMENT -->
+
+            <div class="work-card">
+
+                <div class="mockup">
+
+                    <div class="mock-window">
+
+                        <div class="mock-header">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+
+                            <strong style="margin-left:8px;">
+                                Inbox
+                            </strong>
+                        </div>
+
+
+                        <div class="email-row">
+
+                            <span class="email-title">
+                                Order Update
+                            </span>
+
+                            <span class="email-tag">
+                                URGENT
+                            </span>
+
+                        </div>
+
+
+                        <div class="email-row">
+
+                            <span class="email-title">
+                                Customer Question
+                            </span>
+
+                            <span class="email-tag">
+                                REPLY
+                            </span>
+
+                        </div>
+
+
+                        <div class="email-row">
+
+                            <span class="email-title">
+                                Weekly Newsletter
+                            </span>
+
+                            <span class="email-tag">
+                                PROMO
+                            </span>
+
+                        </div>
+
+
+                        <div class="email-row">
+
+                            <span class="email-title">
+                                Meeting Confirmation
+                            </span>
+
+                            <span class="email-tag">
+                                FOLLOW-UP
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="work-content">
+
+                    <h3>Email Management</h3>
+
+                    <p>
+                        Organized a sample inbox by categorizing emails,
+                        identifying priority messages, and creating follow-up labels.
+                    </p>
+
+                    <span class="tag">Email Organization</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- 2 CALENDAR MANAGEMENT -->
+
+            <div class="work-card">
+
+                <div class="mockup">
+
+                    <div class="mock-window">
+
+                        <div class="mock-header">
+
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+
+                            <strong style="margin-left:8px;">
+                                Weekly Calendar
+                            </strong>
+
+                        </div>
+
+
+                        <div class="calendar-grid">
+
+                            <div class="calendar-day">
+                                <strong>MON</strong>
+
+                                <div class="event">
+                                    Team Meeting<br>
+                                    9:00 AM
+                                </div>
+
+                                <div class="event pink-event">
+                                    Email Review<br>
+                                    2:00 PM
+                                </div>
+                            </div>
+
+
+                            <div class="calendar-day">
+                                <strong>TUE</strong>
+
+                                <div class="event pink-event">
+                                    Client Call<br>
+                                    10:00 AM
+                                </div>
+
+                                <div class="event">
+                                    Project Work<br>
+                                    1:00 PM
+                                </div>
+                            </div>
+
+
+                            <div class="calendar-day">
+                                <strong>WED</strong>
+
+                                <div class="event">
+                                    Research<br>
+                                    9:30 AM
+                                </div>
+                            </div>
+
+
+                            <div class="calendar-day">
+                                <strong>THU</strong>
+
+                                <div class="event pink-event">
+                                    Follow-Up<br>
+                                    11:00 AM
+                                </div>
+                            </div>
+
+
+                            <div class="calendar-day">
+                                <strong>FRI</strong>
+
+                                <div class="event">
+                                    Weekly Review<br>
+                                    3:00 PM
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="work-content">
+
+                    <h3>Calendar Management</h3>
+
+                    <p>
+                        Created a sample weekly schedule with meetings,
+                        appointments, and task blocks.
+                    </p>
+
+                    <span class="tag">Scheduling</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- 3 DATA ENTRY -->
+
+            <div class="work-card">
+
+                <div class="mockup">
+
+                    <div class="mock-window">
+
+                        <div class="mock-header">
+
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+
+                            <strong style="margin-left:8px;">
+                                Customer Database
+                            </strong>
+
+                        </div>
+
+
+                        <div class="spreadsheet">
+
+                            <table>
+
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Status</th>
+                                </tr>
+
+                                <tr>
+                                    <td>001</td>
+                                    <td>Sofia</td>
+                                    <td>sofia@email.com</td>
+                                    <td><span class="status">Complete</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>002</td>
+                                    <td>Emma</td>
+                                    <td>emma@email.com</td>
+                                    <td><span class="status">Complete</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>003</td>
+                                    <td>Olivia</td>
+                                    <td>olivia@email.com</td>
+                                    <td><span class="status">Complete</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>004</td>
+                                    <td>Mia</td>
+                                    <td>mia@email.com</td>
+                                    <td><span class="status">Pending</span></td>
+                                </tr>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="work-content">
+
+                    <h3>Data Entry</h3>
+
+                    <p>
+                        Created a sample customer spreadsheet showing
+                        accurate data organization and status tracking.
+                    </p>
+
+                    <span class="tag">Data Organization</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- 4 DOCUMENT FORMATTING -->
+
+            <div class="work-card">
+
+                <div class="mockup">
+
+                    <div class="mock-window">
+
+                        <div class="document">
+
+                            <h4>Monthly Business Report</h4>
+
+                            <div class="subtitle">
+                                Prepared for Portfolio Practice
+                            </div>
+
+                            <strong style="font-size:12px;">
+                                Executive Summary
+                            </strong>
+
+                            <div class="document-line"></div>
+                            <div class="document-line"></div>
+                            <div class="document-line medium"></div>
+
+                            <br>
+
+                            <strong style="font-size:12px;">
+                                Key Activities
+                            </strong>
+
+                            <div class="document-line"></div>
+                            <div class="document-line short"></div>
+
+                            <br>
+
+                            <strong style="font-size:12px;">
+                                Next Steps
+                            </strong>
+
+                            <div class="document-line medium"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="work-content">
+
+                    <h3>Document Formatting</h3>
+
+                    <p>
+                        Designed a clean sample business report with
+                        headings, sections, and organized information.
+                    </p>
+
+                    <span class="tag">Microsoft Word</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- 5 INTERNET RESEARCH -->
+
+            <div class="work-card">
+
+                <div class="mockup">
+
+                    <div class="mock-window">
+
+                        <div class="mock-header">
+
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+
+                            <strong style="margin-left:8px;">
+                                Research Comparison
+                            </strong>
+
+                        </div>
+
+
+                        <table class="research-table">
+
+                            <tr>
+                                <th>Tool</th>
+                                <th>Best For</th>
+                                <th>Use</th>
+                            </tr>
+
+                            <tr>
+                                <td>Google Drive</td>
+                                <td>Files</td>
+                                <td>Storage</td>
+                            </tr>
+
+                            <tr>
+                                <td>Trello</td>
+                                <td>Tasks</td>
+                                <td>Planning</td>
+                            </tr>
+
+                            <tr>
+                                <td>Canva</td>
+                                <td>Design</td>
+                                <td>Graphics</td>
+                            </tr>
+
+                            <tr>
+                                <td>Zoom</td>
+                                <td>Meetings</td>
+                                <td>Calls</td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <div class="work-content">
+
+                    <h3>Internet Research</h3>
+
+                    <p>
+                        Created a sample comparison table to organize
+                        research findings in a simple and useful format.
+                    </p>
+
+                    <span class="tag">Online Research</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- 6 CUSTOMER SUPPORT -->
+
+            <div class="work-card">
+
+                <div class="mockup">
+
+                    <div class="mock-window">
+
+                        <div class="mock-header">
+
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+
+                            <strong style="margin-left:8px;">
+                                Customer Support
+                            </strong>
+
+                        </div>
+
+
+                        <div class="chat">
+
+                            <div class="message customer">
+                                Hi! I haven't received my order yet.
+                                Can you please check the status?
+                            </div>
+
+
+                            <div class="message assistant">
+                                Hi! Thank you for reaching out. ♡
+                                I'd be happy to help.
+                                Let me check your order status for you.
+                            </div>
+
+
+                            <div class="message customer">
+                                Thank you!
+                            </div>
+
+
+                            <div class="message assistant">
+                                You're welcome! I'll make sure to
+                                keep you updated.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="work-content">
+
+                    <h3>Customer Support</h3>
+
+                    <p>
+                        Created a practice customer service conversation
+                        demonstrating polite and professional communication.
+                    </p>
+
+                    <span class="tag">Communication</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- 7 SOCIAL MEDIA -->
+
+            <div class="work-card">
+
+                <div class="mockup">
+
+                    <div class="mock-window">
+
+                        <div class="social-post">
+
+                            <div class="social-image">
+                                Bloom Café ♡
+                            </div>
+
+
+                            <div class="social-body">
+
+                                <div class="social-name">
+                                    bloomcafe
+                                </div>
+
+                                <p>
+                                    A little sweetness makes every day
+                                    better. Come visit us today! ☕🌸
+                                </p>
+
+                                <p>
+                                    #BloomCafe #CoffeeTime #CafeLife
+                                </p>
+
+                                <div class="social-icons">
+                                    ♡ 24 &nbsp;&nbsp; 💬 6 &nbsp;&nbsp; ↗ Share
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="work-content">
+
+                    <h3>Social Media Assistance</h3>
+
+                    <p>
+                        Designed a fictional social media post including
+                        caption, hashtags, branding, and engagement elements.
+                    </p>
+
+                    <span class="tag">Social Media</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- 8 ADMIN TASK TRACKER -->
+
+            <div class="work-card">
+
+                <div class="mockup">
+
+                    <div class="mock-window">
+
+                        <div class="mock-header">
+
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+
+                            <strong style="margin-left:8px;">
+                                Admin Task Tracker
+                            </strong>
+
+                        </div>
+
+
+                        <table class="task-table">
+
+                            <tr>
+                                <th>Task</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                            </tr>
+
+                            <tr>
+                                <td>Reply to emails</td>
+                                <td class="priority">High</td>
+                                <td>Done</td>
+                            </tr>
+
+                            <tr>
+                                <td>Update spreadsheet</td>
+                                <td>Medium</td>
+                                <td>Done</td>
+                            </tr>
+
+                            <tr>
+                                <td>Research suppliers</td>
+                                <td class="priority">High</td>
+                                <td>In Progress</td>
+                            </tr>
+
+                            <tr>
+                                <td>Organize files</td>
+                                <td>Low</td>
+                                <td>Pending</td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <div class="work-content">
+
+                    <h3>Administrative Assistance</h3>
+
+                    <p>
+                        Created a sample task tracker for organizing
+                        priorities, deadlines, and administrative work.
+                    </p>
+
+                    <span class="tag">Task Management</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My Skills ♡</h2>
+
+            <p>Tools and skills I am developing as an aspiring VA.</p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skills-box">
+
+                <div class="skill">
+
+                    <div class="skill-title">
+                        <span>Organization</span>
+                        <span>90%</span>
+                    </div>
+
+                    <div class="bar">
+                        <span style="width:90%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-title">
+                        <span>Communication</span>
+                        <span>85%</span>
+                    </div>
+
+                    <div class="bar">
+                        <span style="width:85%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-title">
+                        <span>Data Entry</span>
+                        <span>85%</span>
+                    </div>
+
+                    <div class="bar">
+                        <span style="width:85%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-title">
+                        <span>Time Management</span>
+                        <span>85%</span>
+                    </div>
+
+                    <div class="bar">
+                        <span style="width:85%;"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skills-box">
+
+                <h3 style="font-family:'Playfair Display',serif;
+                           color:#9c527d;
+                           margin-bottom:20px;">
+                    Tools I Can Work With
+                </h3>
+
+
+                <div class="tools">
+
+                    <span class="tool">Google Docs</span>
+
+                    <span class="tool">Google Sheets</span>
+
+                    <span class="tool">Google Drive</span>
+
+                    <span class="tool">Microsoft Word</span>
+
+                    <span class="tool">Microsoft Excel</span>
+
+                    <span class="tool">Canva</span>
+
+                    <span class="tool">Google Calendar</span>
+
+                    <span class="tool">Zoom</span>
+
+                    <span class="tool">Trello</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Let's Work Together ♡</h2>
+
+            <p>
+                I'm always open to learning and new opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <h3>Get In Touch</h3>
+
+            <p>
+                If you're looking for an aspiring Virtual Assistant
+                who is organized, willing to learn, and ready to help,
+                I'd love to hear from you.
+            </p>
+
+
+            <div class="contact-info">
+
+                <p>
+                    📧
+                    <a href="mailto:humpygai09@gmail.com">
+                        humpygai09@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    📱
+                    <a href="tel:09240336281">
+                        09240336281
+                    </a>
+                </p>
+
+            </div>
+
+
+            <a href="mailto:humpygai09@gmail.com"
+               class="btn btn-primary">
+                Send Me an Email ♡
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 Angel Alaine Nunez • Aspiring Virtual Assistant ♡
+    </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    // Highlight navigation link based on current section
+
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", () => {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const sectionTop = section.offsetTop - 150;
+            const sectionHeight = section.offsetHeight;
+
+            if (
+                window.scrollY >= sectionTop &&
+                window.scrollY < sectionTop + sectionHeight
+            ) {
+                current = section.getAttribute("id");
+            }
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.style.color = "";
+
+            if (link.getAttribute("href") === "#" + current) {
+                link.style.color = "#c45f91";
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
